@@ -2,23 +2,40 @@
  * Let's make a calculator 🧮
  */
 
-type cal = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
+// type cal = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
 
-function calculate(type: cal, num1: number, num2: number): number {
+// function calculate(type: cal, num1: number, num2: number): number {
 
-  switch(type) {
+//   switch(type) {
+//     case 'add':
+//     return num1 + num2;
+//     case 'substract':
+//     return num1 - num2;
+//     case 'multiply':
+//     return num1 * num2;
+//     case 'divide':
+//     return num1 / num2;
+//     case 'remainder':
+//     return num1 % num2;
+//     default:
+//     return 0;
+//   }
+// }
+type Command = 'add' | 'substract' | 'multiply' | 'divide' | 'remainder';
+function calculate(command: Command, num1: number, num2: number): number {
+  switch(command) {
     case 'add':
-    return num1 + num2;
+      return num1 + num2;
     case 'substract':
-    return num1 - num2;
+      return num1 - num2;
     case 'multiply':
-    return num1 * num2;
+      return num1 * num2;
     case 'divide':
-    return num1 / num2;
+      return num1 / num2;
     case 'remainder':
-    return num1 % num2;
+      return num1 % num2;
     default:
-    return 0;
+      throw new Error('unknown command');
   }
 }
 
