@@ -19,6 +19,7 @@
     isDog: boolean = false;
   }
   const animals: Animal[] = [new Cat(), new Cat(), new Cat()];
+
   function isCat(animal: Animal): animal is Cat {
     return (animal as Cat).isCat !== undefined;
   }
